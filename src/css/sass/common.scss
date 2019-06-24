@@ -1,0 +1,74 @@
+// 页面容器样式
+.common__container--1200 {
+    max-width: 1200px;
+}
+.common__container--1920 {
+    width: 100%;
+}
+
+// 元素显示样式
+.common__block {
+    display: block;
+}
+.common__margin--center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// 元素浮动样式
+.common__clearfix::after {
+    @include clearFix;
+}
+.common__left {
+    float: left;
+}
+.common__right {
+    float: right;
+}
+
+// 文本样式
+.common__text--bold {
+    font-weight: bold;
+}
+.common__text--hidden {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.common__vertical--center {
+    vertical-align: middle;
+}
+.common__text--center {
+    text-align: center;
+}
+.common__level {
+    text-align: center;
+    vertical-align: center;
+}
+
+// 元素百分比宽度
+@for $i from 1 through 12 {
+    $percent: (100 / 120) * 10% * $i;
+    .common__width--#{$i} {
+        width: #{$percent};
+        min-height: 1px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .col-sm-12 {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .col-xs-12 {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+}

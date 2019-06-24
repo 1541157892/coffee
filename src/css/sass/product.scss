@@ -1,0 +1,111 @@
+@import './animation.scss';
+@import './header.scss';
+@import './base.scss';
+@import './common.scss';
+@import './_var';
+.content {
+    .content__main {
+        margin-left: auto;
+        margin-right: auto;
+        // 新品介绍部分
+        .main__new-product {
+            margin-bottom: 20px;
+            margin-top: 60px;
+            strong {
+                display: inline-block;
+                margin-top: 5px;
+                margin-left: 10px;
+                font-size: 16px;
+                vertical-align: top;
+            }
+        }
+        .main__show {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            .show-wrapper {
+                font-size: 0;
+            }
+        }
+    }
+}
+
+// 选项卡部分
+.content__tab {
+    .tab__item {
+        display: flex;
+        .item__li {
+            flex: 1;
+            overflow: hidden;
+            height: 40px;
+            line-height: 40px;
+            font-size: 12px;
+            text-align: center;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: $tab-text-color;
+            i {
+                display: none;
+            }
+        }
+        .item__li.tab__li--active {
+            position: relative;
+            color: $black;
+            i {
+                display: block;
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                width: 50%;
+                height: 3px;
+                transform: translateX(50%);
+                background-color: $black;
+            }
+        }
+    }
+}
+
+// 选项卡显示部分
+.content__block {
+    overflow: hidden;
+    display: none;
+    margin-top: 1px;
+    outline: 1px solid $tab-outline-color;
+    .block__wrapper {
+        width: 100%;
+    }
+    &.content__block--show {
+        display: block;
+    }
+    .block__ul {
+        .block__li {
+            box-sizing: border-box;
+            .img__wrapper {
+                margin-right: 5%;
+                width: 50%;
+                img {
+                    display: block;
+                    width: 100%;
+                    transform: scale(1);
+                }
+            }
+            .title__wrapper {
+                width: 45%;
+                a {
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                    overflow: hidden;
+                    line-height: 34px;
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+            }
+        }
+        .block__li:nth-of-type(2n+1) {
+            padding: 0% 2% 20px 1%;
+        }
+        .block__li:nth-of-type(2n+2) {
+            padding: 0% 1% 20px 2%;
+        }
+    }
+}

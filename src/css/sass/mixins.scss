@@ -1,0 +1,16 @@
+@mixin clearFix {
+    content: "";
+    display: block;
+    clear: both;
+}
+@mixin width-scale($scale) {
+    width: (100 / 120 * 10%) * $scale;
+    min-height: 1px;
+}
+@mixin bg-normal($url) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @content;
+}

@@ -1,0 +1,20 @@
+@import './_var.scss';
+.footer {
+    background-color: $footer-bg-color;
+    .footer__main {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        .main__page {
+            font-size: 14px;
+            .page__wrapper {
+                a, span {
+                    font-size: 14px;
+                    color: $white;
+                }
+            }
+            .page__other {
+                text-decoration: underline;
+            }
+        }
+    }
+}

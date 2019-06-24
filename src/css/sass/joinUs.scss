@@ -1,0 +1,39 @@
+@import './header.scss';
+@import './common.scss';
+@import './base.scss';
+@import './animation.scss';
+.content__joinUs {
+    .joinUs__title {
+        margin-top: 60px;
+        margin-bottom: 20px;
+        margin-right: auto;
+        margin-left: auto;
+        .joinUs__text {
+            margin-left: 10px;
+        }
+    }
+    .joinUs__demand {
+        padding-left: 10px;
+        border-bottom: 1px solid #dfdfdf;
+    }
+    .joinUs__demand p {
+        margin-bottom: 5px;
+        font-size: 16px;
+        line-height: 1.5em;
+    }
+    .joinUs__demand span {
+        font-size: 14px;
+        line-height: 1px;
+        color: rgb(102, 102, 102);
+    }
+    .joinUs__check {
+        margin-top: 30px;
+    }
+    .joinUs__check .check__btn {
+        display: block;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 150px;
+        border: 1px solid #666666;
+    }
+}
